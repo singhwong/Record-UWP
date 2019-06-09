@@ -1,0 +1,50 @@
+﻿<Page
+    x:Class="RecordUWP.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:RecordUWP"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Grid Background="{ThemeResource SystemControlAcrylicWindowBrush}">
+            <Grid.Resources>
+                <ResourceDictionary>
+                    <ResourceDictionary.ThemeDictionaries>
+                        <ResourceDictionary x:Key="Default">
+                            <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1" x:Key="ButtonBackground">
+                                <GradientStop Color="#bffa7765" Offset="0.0"/>
+                                <GradientStop Color="#bfd5407a" Offset="1.0"/>
+                            </LinearGradientBrush>
+                            <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1" x:Key="ButtonBorderBrush">
+                                <GradientStop Color="White" Offset="0.0"/>
+                                <GradientStop Color="Purple" Offset="1.0"/>
+                            </LinearGradientBrush>
+                            <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1" x:Key="ButtonBackgroundPointerOver">
+                                <GradientStop Color="#bfd5407a" Offset="0.0"/>
+                                <GradientStop Color="#bffa7765" Offset="1.0"/>
+                            </LinearGradientBrush>
+                            <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1" x:Key="ButtonBorderBrushPointerOver">
+                                <GradientStop Color="Purple" Offset="0.0"/>
+                                <GradientStop Color="White" Offset="1.0"/>
+                            </LinearGradientBrush>
+                            <SolidColorBrush x:Key="ButtonForeground" Color="White"/>
+                            <SolidColorBrush x:Key="ButtonForegroundPointerOver" Color="White"/>
+                            <SolidColorBrush x:Key="ButtonForegroundPressed" Color="White"/>
+                            <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="#bfd5407a"/>
+                        </ResourceDictionary>
+                    </ResourceDictionary.ThemeDictionaries>
+                </ResourceDictionary>
+            </Grid.Resources>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="audioRecord_button" CornerRadius="10" Height="50" Width="200" BorderThickness="1" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center" Content="录制音频" Tapped="AudioRecord_button_Tapped"/>
+            <Button x:Name="videoRecord_button" CornerRadius="10" Height="50" Width="200" BorderThickness="1" FontWeight="Bold" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" Content="录制视频" Tapped="VideoRecord_button_Tapped"/>
+        </Grid>
+    </Grid>
+   
+</Page>
